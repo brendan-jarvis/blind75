@@ -16,3 +16,21 @@ describe('Contains Duplicate #217', () => {
     )
   })
 })
+
+describe('Valid Anagram #242', () => {
+  it('should return true if the strings are anagrams', () => {
+    expect(leetcode.isAnagram('anagram', 'nagaram')).toBe(true)
+  })
+
+  it('should return false if the strings are not anagrams', () => {
+    expect(leetcode.isAnagram('rat', 'car')).toBe(false)
+  })
+
+  it('should not be case sensitive', () => {
+    expect(leetcode.isAnagram('Nadnerb Sivraj', 'Brendan Jarvis')).toBe(true)
+  })
+
+  it('should return false on strings of different lengths', () => {
+    expect(leetcode.isAnagram('a', 'ab')).toBe(false)
+  })
+})
