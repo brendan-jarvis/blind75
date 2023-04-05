@@ -3,7 +3,7 @@
   "scripts": {
     "start": "node build/index.js",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest --watch "
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
