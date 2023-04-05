@@ -6,10 +6,6 @@ export const containsDuplicate = (nums: number[]): boolean => {
 }
 
 export const isAnagram = (s: string, t: string): boolean => {
-  // If the strings are not the same length, they cannot be anagrams
-  if (s.length !== t.length) {
-    return false
-  }
   // Create an array each string characters in lowercase
   // Sort the arrays
   // Join the arrays back into strings
