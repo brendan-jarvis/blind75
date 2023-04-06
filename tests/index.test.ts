@@ -61,7 +61,11 @@ describe('Valid Palindrome #125', () => {
     expect(leetcode.isPalindrome('race a car')).toBe(false)
   })
 
-  it('should return true if the string a palindrome as it has no alphanumeric characters', () => {
+  it('should return true if the string is a palindrome as it has no alphanumeric characters', () => {
     expect(leetcode.isPalindrome(' ')).toBe(true)
+  })
+
+  it('should return true if the string is a palindrome with an underscore in it', () => {
+    expect(leetcode.isPalindrome('ab_a')).toBe(true)
   })
 })
