@@ -39,3 +39,13 @@ export const twoSum = (nums: number[], target: number): number[] => {
   // If we get here, there are no two numbers that add up to the target
   return []
 }
+
+export const isPalindrome = (s: string): boolean => {
+  // Remove all non-alphanumeric characters using regex - can find this with Google
+  // Use built-in string methods to convert to lowercase
+  // No built-in reverse method for strings, so split into an array, reverse, and join back into a string
+  return (
+    s.replace(/\W/g, '').toLowerCase().split('').reverse().join('') ===
+    s.replace(/\W/g, '').toLowerCase()
+  )
+}
