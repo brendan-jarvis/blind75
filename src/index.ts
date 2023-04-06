@@ -15,3 +15,27 @@ export const isAnagram = (s: string, t: string): boolean => {
     t.toLowerCase().split('').sort().join('')
   )
 }
+
+export const twoSum = (nums: number[], target: number): number[] => {
+  // Create a map to store the numbers and their indices
+  const map = new Map()
+
+  // Loop through the array
+  for (let i = 0; i < nums.length; i++) {
+    // The current number
+    const num = nums[i]
+    // The number we need to add to the current number to get the target
+    const complement = target - num
+
+    // If the map has the complement, return the indices
+    if (map.has(complement)) {
+      return [map.get(complement), i]
+    }
+
+    // Otherwise, add the number and its index to the map
+    map.set(num, i)
+  }
+
+  // If we get here, there are no two numbers that add up to the target
+  return []
+}
