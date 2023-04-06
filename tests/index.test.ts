@@ -51,3 +51,17 @@ describe('Two Sum #1', () => {
     expect(leetcode.twoSum([2, 7, 11, 15], 10)).toEqual([])
   })
 })
+
+describe('Valid Palindrome #125', () => {
+  it('should return true if the string is a palindrome', () => {
+    expect(leetcode.isPalindrome('A man, a plan, a canal: Panama')).toBe(true)
+  })
+
+  it('should return false if the string is not a palindrome', () => {
+    expect(leetcode.isPalindrome('race a car')).toBe(false)
+  })
+
+  it('should return true if the string a palindrome as it has no alphanumeric characters', () => {
+    expect(leetcode.isPalindrome(' ')).toBe(true)
+  })
+})
