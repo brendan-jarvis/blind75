@@ -1,4 +1,3 @@
-// import all functions from the index file
 import * as leetcode from '../src/index'
 
 describe('Contains Duplicate #217', () => {
@@ -32,5 +31,23 @@ describe('Valid Anagram #242', () => {
 
   it('should return false on strings of different lengths', () => {
     expect(leetcode.isAnagram('a', 'ab')).toBe(false)
+  })
+})
+
+describe('Two Sum #1', () => {
+  it('should return the indices of the two numbers that add up to the target', () => {
+    expect(leetcode.twoSum([2, 7, 11, 15], 9)).toEqual([0, 1])
+  })
+
+  it('should return the indices of the two numbers that add up to the target', () => {
+    expect(leetcode.twoSum([3, 2, 4], 6)).toEqual([1, 2])
+  })
+
+  it('should return the indices of the two numbers that add up to the target', () => {
+    expect(leetcode.twoSum([3, 3], 6)).toEqual([0, 1])
+  })
+
+  it('should return an empty array if there are no two numbers that add up to the target', () => {
+    expect(leetcode.twoSum([2, 7, 11, 15], 10)).toEqual([])
   })
 })
