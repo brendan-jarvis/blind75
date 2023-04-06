@@ -45,7 +45,11 @@ export const isPalindrome = (s: string): boolean => {
   // Use built-in string methods to convert to lowercase
   // No built-in reverse method for strings, so split into an array, reverse, and join back into a string
   return (
-    s.replace(/\W/g, '').toLowerCase().split('').reverse().join('') ===
-    s.replace(/\W/g, '').toLowerCase()
+    s
+      .replace(/[^a-zA-Z0-9]/g, '')
+      .toLowerCase()
+      .split('')
+      .reverse()
+      .join('') === s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
   )
 }
