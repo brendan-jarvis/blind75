@@ -55,14 +55,14 @@ export const isPalindrome = (s: string): boolean => {
 }
 
 export const maxProfit = (prices: number[]): number => {
+  let min = prices[0]
   let maxProfit = 0
 
-  for (let i = 0; i < prices.length; i++) {
-    for (let j = i + 1; j < prices.length; j++) {
-      const profit = prices[j] - prices[i]
-      if (profit > maxProfit) {
-        maxProfit = profit
-      }
+  for (let i = 1; i < prices.length; i++) {
+    if (prices[i] < min) {
+      min = prices[i]
+    } else if (prices[i] - min > maxProfit) {
+      maxProfit = prices[i] - min
     }
   }
 
