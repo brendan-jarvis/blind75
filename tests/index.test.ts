@@ -69,3 +69,17 @@ describe('Valid Palindrome #125', () => {
     expect(leetcode.isPalindrome('ab_a')).toBe(true)
   })
 })
+
+describe('Best Time to Buy and Sell Stock #121', () => {
+  it('should return the max profit', () => {
+    expect(leetcode.maxProfit([7, 1, 5, 3, 6, 4])).toEqual(5)
+  })
+
+  it('should not make a transaction if no profit to be made', () => {
+    expect(leetcode.maxProfit([7, 6, 4, 3, 1])).toEqual(0)
+  })
+
+  it('should return the max profit', () => {
+    expect(leetcode.maxProfit([1, 2, 4, 7, 11])).toEqual(10)
+  })
+})
