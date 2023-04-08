@@ -91,3 +91,23 @@ export const validParentheses = (s: string): boolean => {
 
   return stack.length === 0
 }
+
+// Definition for singly-linked list.
+export class ListNode {
+  val: number
+  next: ListNode | null
+  constructor(val?: number, next?: ListNode | null) {
+    this.val = val === undefined ? 0 : val
+    this.next = next === undefined ? null : next
+  }
+}
+
+export const reverseList = (head: ListNode | null): ListNode | null => {
+  let previous = null,
+    current = head
+  while (current !== null) {
+    previous = new ListNode(current.val, previous)
+    current = current.next
+  }
+  return previous
+}
