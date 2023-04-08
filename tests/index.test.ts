@@ -117,3 +117,49 @@ describe('Valid Parentheses #20', () => {
     expect(leetcode.validParentheses('([{[([{[]}])]}])')).toEqual(true)
   })
 })
+
+describe('Reverse Linked List #206', () => {
+  it('should reverse a linked list', () => {
+    const list = new leetcode.ListNode(1)
+    list.next = new leetcode.ListNode(2)
+    list.next.next = new leetcode.ListNode(3)
+    list.next.next.next = new leetcode.ListNode(4)
+    list.next.next.next.next = new leetcode.ListNode(5)
+
+    const reversed = leetcode.reverseList(list)
+    // Flatten the linked list into an array
+    const reversedArray: number[] = []
+    let node = reversed
+    while (node) {
+      reversedArray.push(node.val)
+      node = node.next
+    }
+
+    expect(reversedArray).toEqual([5, 4, 3, 2, 1])
+  })
+
+  it('should handle an empty linked list', () => {
+    expect(leetcode.reverseList(null)).toEqual(null)
+  })
+
+  it('should handle a linked list with one node', () => {
+    const list = new leetcode.ListNode(1)
+    expect(leetcode.reverseList(list)).toEqual(list)
+  })
+
+  it('should handle a linked list with two nodes', () => {
+    const list = new leetcode.ListNode(1)
+    list.next = new leetcode.ListNode(2)
+
+    const reversed = leetcode.reverseList(list)
+
+    const reversedArray: number[] = []
+    let node = reversed
+    while (node) {
+      reversedArray.push(node.val)
+      node = node.next
+    }
+
+    expect(reversedArray).toEqual([2, 1])
+  })
+})
