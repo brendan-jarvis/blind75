@@ -70,9 +70,9 @@ export const maxProfit = (prices: number[]): number => {
 }
 
 export const validParentheses = (s: string): boolean => {
-  const stringArray = s.split('')
+  const characters = s.split('')
 
-  const map = {
+  const brackets = {
     '{': '}',
     '[': ']',
     '(': ')',
@@ -80,14 +80,14 @@ export const validParentheses = (s: string): boolean => {
 
   const complements = new Map()
 
-  for (let i = 0; i < stringArray.length; i++) {
+  for (let i = 0; i < characters.length; i++) {
     // if value is a bracket, add it to the map
-    if (stringArray[i] in map) {
-      const complement = map[stringArray[i]]
+    if (characters[i] in brackets) {
+      const complement = brackets[characters[i]]
       complements.set(complement, i)
     }
     // if it is a closing bracket, check in complements
-    complements.delete(stringArray[i])
+    complements.delete(characters[i])
   }
 
   return complements.size === 0
