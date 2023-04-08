@@ -105,7 +105,15 @@ describe('Valid Parentheses #20', () => {
     expect(leetcode.validParentheses('(;')).toEqual(false)
   })
 
-  it('should detect nested brackets', () => {
+  it('should detect incorrectly nested brackets', () => {
     expect(leetcode.validParentheses('([)]')).toEqual(false)
+  })
+
+  it('should allow correctly nested brackets', () => {
+    expect(leetcode.validParentheses('([])')).toEqual(true)
+  })
+
+  it('should allow longer correctly nested brackets', () => {
+    expect(leetcode.validParentheses('([{[([{[]}])]}])')).toEqual(true)
   })
 })
