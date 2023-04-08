@@ -83,3 +83,29 @@ describe('Best Time to Buy and Sell Stock #121', () => {
     expect(leetcode.maxProfit([1, 2, 4, 7, 11])).toEqual(10)
   })
 })
+
+describe('Valid Parentheses #20', () => {
+  it('should detect rounded brackets', () => {
+    expect(leetcode.validParentheses('()')).toEqual(true)
+  })
+
+  it('should detect square brackets', () => {
+    expect(leetcode.validParentheses('[]')).toEqual(true)
+  })
+
+  it('should detect curly brackets', () => {
+    expect(leetcode.validParentheses('{}')).toEqual(true)
+  })
+
+  it('should detect unmatched brackets', () => {
+    expect(leetcode.validParentheses('(}')).toEqual(false)
+  })
+
+  it('should detect missing brackets', () => {
+    expect(leetcode.validParentheses('(;')).toEqual(false)
+  })
+
+  it('should detect nested brackets', () => {
+    expect(leetcode.validParentheses('([)]')).toEqual(false)
+  })
+})
