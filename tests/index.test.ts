@@ -163,3 +163,46 @@ describe('Reverse Linked List #206', () => {
     expect(reversedArray).toEqual([2, 1])
   })
 })
+
+describe('Merge Two Sorted Lists #21', () => {
+  it('should merge two sorted lists', () => {
+    const list1 = new leetcode.ListNode(1)
+    list1.next = new leetcode.ListNode(2)
+    list1.next.next = new leetcode.ListNode(4)
+
+    const list2 = new leetcode.ListNode(1)
+    list2.next = new leetcode.ListNode(3)
+    list2.next.next = new leetcode.ListNode(4)
+
+    const merged = leetcode.mergeTwoLists(list1, list2)
+
+    const mergedArray: number[] = []
+    let node = merged
+    while (node) {
+      mergedArray.push(node.val)
+      node = node.next
+    }
+
+    expect(mergedArray).toEqual([1, 1, 2, 3, 4, 4])
+  })
+
+  it('should handle an empty list', () => {
+    const list1 = new leetcode.ListNode(1)
+    list1.next = new leetcode.ListNode(2)
+    list1.next.next = new leetcode.ListNode(4)
+
+    expect(leetcode.mergeTwoLists(list1, null)).toEqual(list1)
+  })
+
+  it('should handle an empty list', () => {
+    const list2 = new leetcode.ListNode(1)
+    list2.next = new leetcode.ListNode(3)
+    list2.next.next = new leetcode.ListNode(4)
+
+    expect(leetcode.mergeTwoLists(null, list2)).toEqual(list2)
+  })
+
+  it('should handle two empty lists', () => {
+    expect(leetcode.mergeTwoLists(null, null)).toEqual(null)
+  })
+})
