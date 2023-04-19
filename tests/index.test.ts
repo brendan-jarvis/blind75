@@ -239,3 +239,25 @@ describe('Linked List Cycle #141', () => {
     expect(leetcode.hasCycle(list)).toEqual(false)
   })
 })
+
+describe('Climbing Stairs #70', () => {
+  it('should return the number of ways to climb 2 stairs', () => {
+    expect(leetcode.climbStairs(2)).toEqual(2)
+  })
+
+  it('should return the number of ways to climb 3 stairs', () => {
+    expect(leetcode.climbStairs(3)).toEqual(3)
+  })
+
+  it('should return the number of ways to climb 4 stairs', () => {
+    expect(leetcode.climbStairs(4)).toEqual(5)
+  })
+
+  it('should return the number of ways to climb 5 stairs', () => {
+    expect(leetcode.climbStairs(5)).toEqual(8)
+  })
+
+  it('should return the number of ways to climb 6 stairs', () => {
+    expect(leetcode.climbStairs(6)).toEqual(13)
+  })
+})
