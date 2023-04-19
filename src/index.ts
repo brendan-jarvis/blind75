@@ -144,15 +144,15 @@ export const climbStairs = (n: number): number => {
   if (n === 1) return 1
   if (n === 2) return 2
 
-  let first = 1,
-    second = 2,
-    third = 0
+  let one_step = 1,
+    two_steps = 2,
+    all_steps = 0
 
   for (let i = 3; i <= n; i++) {
-    third = first + second
-    first = second
-    second = third
+    all_steps = one_step + two_steps
+    one_step = two_steps
+    two_steps = all_steps
   }
 
-  return third
+  return all_steps
 }
