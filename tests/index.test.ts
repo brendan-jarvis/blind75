@@ -206,3 +206,36 @@ describe('Merge Two Sorted Lists #21', () => {
     expect(leetcode.mergeTwoLists(null, null)).toEqual(null)
   })
 })
+
+describe('Linked List Cycle #141', () => {
+  it('should detect a cycle', () => {
+    const list = new leetcode.ListNode(3)
+    list.next = new leetcode.ListNode(2)
+    list.next.next = new leetcode.ListNode(0)
+    list.next.next.next = new leetcode.ListNode(-4)
+    list.next.next.next.next = list.next
+
+    expect(leetcode.hasCycle(list)).toEqual(true)
+  })
+
+  it('should detect a cycle', () => {
+    const list = new leetcode.ListNode(1)
+    list.next = new leetcode.ListNode(2)
+    list.next.next = list
+
+    expect(leetcode.hasCycle(list)).toEqual(true)
+  })
+
+  it('should not detect a cycle', () => {
+    const list = new leetcode.ListNode(1)
+
+    expect(leetcode.hasCycle(list)).toEqual(false)
+  })
+
+  it('should not detect a cycle', () => {
+    const list = new leetcode.ListNode(1)
+    list.next = new leetcode.ListNode(2)
+
+    expect(leetcode.hasCycle(list)).toEqual(false)
+  })
+})
