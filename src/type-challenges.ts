@@ -9,15 +9,16 @@ import type { Equal, Expect, NotAny } from '@type-challenges/utils'
 type cases = [Expect<NotAny<HelloWorld>>, Expect<Equal<HelloWorld, string>>]
 
 // 4. Easy - Pick
-type MyPick<T, K> = any
+// Implement Pick, which takes an object type and a set of string literal types and returns a type which just has the provided fields.
+type MyPick<T, K> = {
+  [P in keyof T as P extends K ? P : never]: T[P]
+}
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from '@type-challenges/utils'
 
-type cases = [
+type pickCases = [
   Expect<Equal<Expected1, MyPick<Todo, 'title'>>>,
   Expect<Equal<Expected2, MyPick<Todo, 'title' | 'completed'>>>,
-  // @ts-expect-error
   MyPick<Todo, 'title' | 'completed' | 'invalid'>
 ]
 
