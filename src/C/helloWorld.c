@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main(){
-  printf("Hello World!\n");
+  int myNumber = 5;
+  char myChar = 'b';
+  printf("Hello World!\nMy number is %i and my letter is %c\n", myNumber, myChar);
   return 0;
 }
