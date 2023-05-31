@@ -1,4 +1,4 @@
-import * as leetcode from '../src/blind75'
+import * as leetcode from '../src/TypeScript/blind75'
 
 describe('Contains Duplicate #217', () => {
   it('should return true if the array contains duplicates', () => {
