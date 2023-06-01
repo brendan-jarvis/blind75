@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int sum(int a, int b){
   return a + b;
@@ -11,14 +12,20 @@ int main(){
   int a = 3;
   int b = 10;
   int numbers[10] = {1,2,3,4,5,6,7,8,9,10};
-  int c = (rand() % (100 - 0 + 1)) + 0;
-  
-  printf("%d\n", c);
 
-  if (c % 2){
-    printf("%d is even\n", c);
+  srand(time(NULL));
+  int c = (rand() % 100);
+
+  if (c % 2 && c < 50){
+    printf("%d is even and less than 50\n", c);
+  } else if (c % 2 && c > 50){
+    printf("%d is even and greater than 50\n", c);
+  } else if (c % 2 == 0 && c < 50){
+    printf("%d is odd and less than 50\n", c);
+  } else if (c % 2 == 0 && c > 50){
+    printf("%d is odd and greater than 50\n", c);
   } else {
-    printf("%d is odd\n", c);
+    printf("%d is equal to 50\n", c);
   }
   
   int result = sum(a, b);
