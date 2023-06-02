@@ -3,6 +3,58 @@
 #include <time.h>
 #include <string.h>
 
+// Function declarations
+int sum(int a, int b);
+void forLoop(int array[]);
+void whileLoop(int array[]);
+void ifElse(char name[], int c);
+void printTime();
+
+int main()
+{
+  int myNumber = 5;
+  char myChar = 'b';
+  char myString[] = "Hello World!";
+  char name[20];
+  int stringLength = strlen(myString);
+  int a = 3;
+  int b = 10;
+  int numbers[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+  // Random number
+  srand(time(NULL));
+  int c = (rand() % 100);
+
+  ifElse(name, c);
+
+  // Sum function
+  int result = sum(a, b);
+
+  if (strcmp(name, "Brendan") == 0)
+  {
+    printf("Hello Brendan!\n");
+  }
+  else
+  {
+    printf("Hello %s!\n", name);
+  }
+
+  forLoop(array);
+
+  whileLoop(array);
+
+  printTime();
+
+  // Print strings
+  printf("The result of %i + %i is %i\n", a, b, result);
+  printf("The 7th number in the array is %i\n", numbers[6]);
+  printf("%s My number is %i and my letter is %c\n", myString, myNumber, myChar);
+  printf("%d\n", stringLength);
+
+  return 0;
+}
+
 int sum(int a, int b)
 {
   return a + b;
@@ -80,49 +132,4 @@ void printTime()
   time_t t = time(NULL);
   struct tm tm = *localtime(&t);
   printf("The time is %d:%d:%d\n", tm.tm_hour, tm.tm_min, tm.tm_sec);
-}
-
-int main()
-{
-  int myNumber = 5;
-  char myChar = 'b';
-  char myString[] = "Hello World!";
-  char name[20];
-  int stringLength = strlen(myString);
-  int a = 3;
-  int b = 10;
-  int numbers[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
-  // Random number
-  srand(time(NULL));
-  int c = (rand() % 100);
-
-  ifElse(name, c);
-
-  // Sum function
-  int result = sum(a, b);
-
-  if (strcmp(name, "Brendan") == 0)
-  {
-    printf("Hello Brendan!\n");
-  }
-  else
-  {
-    printf("Hello %s!\n", name);
-  }
-
-  forLoop(array);
-
-  whileLoop(array);
-
-  printTime();
-
-  // Print strings
-  printf("The result of %i + %i is %i\n", a, b, result);
-  printf("The 7th number in the array is %i\n", numbers[6]);
-  printf("%s My number is %i and my letter is %c\n", myString, myNumber, myChar);
-  printf("%d\n", stringLength);
-
-  return 0;
 }
