@@ -63,6 +63,12 @@ int main(){
       printf("%d.\n", array[j]);
       break;
     }
+
+    if (array[j] % 2 == 0){
+      j++;
+      continue;
+    }
+
     printf("%d, ", array[j]);
     j++;
   }
