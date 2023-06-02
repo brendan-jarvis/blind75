@@ -5,6 +5,7 @@
 
 // Function declarations
 int sum(int a, int b);
+int staticSum(int a);
 void forLoop(int array[]);
 void whileLoop(int array[]);
 void ifElse(char name[], int c);
@@ -51,6 +52,8 @@ int main()
   printf("The 7th number in the array is %i\n", numbers[6]);
   printf("%s My number is %i and my letter is %c\n", myString, myNumber, myChar);
   printf("%d\n", stringLength);
+  printf("Static sum of 5 is %d\n", staticSum(5));
+  printf("Static sum of 75 is %d\n", staticSum(75));
 
   return 0;
 }
@@ -132,4 +135,10 @@ void printTime()
   time_t t = time(NULL);
   struct tm tm = *localtime(&t);
   printf("The time is %d:%d:%d\n", tm.tm_hour, tm.tm_min, tm.tm_sec);
+}
+
+int staticSum(int a)
+{
+  static int result = 0;
+  return result = (a * (a + 1)) / 2;
 }
