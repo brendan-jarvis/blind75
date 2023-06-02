@@ -48,7 +48,17 @@ int main(){
     printf("Hello %s!\n", name);
   }
 
+  // For loop
+  int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+  int factorial = 1;
+  int i;
+
+  for (i = 0; i < 10; i++){
+    factorial *= array[i];
+  }
+
   // Print statements
+  printf("10! is %d.\n", factorial);
   printf("The result of %i + %i is %i\n", a, b, result);
   printf("The 7th number in the array is %i\n", numbers[6]);
   printf("%s My number is %i and my letter is %c\n", myString, myNumber, myChar);
