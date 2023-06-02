@@ -10,6 +10,7 @@ void forLoop(int array[]);
 void whileLoop(int array[]);
 void ifElse(char name[], int c);
 void printTime();
+void pointers();
 
 int main()
 {
@@ -46,6 +47,8 @@ int main()
   whileLoop(array);
 
   printTime();
+
+  pointers();
 
   // Print strings
   printf("The result of %i + %i is %i\n", a, b, result);
@@ -141,4 +144,16 @@ int staticSum(int a)
 {
   static int result = 0;
   return result = (a * (a + 1)) / 2;
+}
+
+void pointers()
+{
+  int a = 5;
+  int *p = &a;
+
+  a++;
+  (*p)++;
+  *p += 1;
+
+  printf("'a' has incremented thrice to 8. 'a' is %d\n", a);
 }
