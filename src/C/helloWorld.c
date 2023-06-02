@@ -57,7 +57,22 @@ int main(){
     factorial *= array[i];
   }
 
-  // Print statements
+  int j = 0;
+  while (j < 10){
+    if (j == 9){
+      printf("%d.\n", array[j]);
+      break;
+    }
+    printf("%d, ", array[j]);
+    j++;
+  }
+
+  // Print the time
+  time_t t = time(NULL);
+  struct tm tm = *localtime(&t);
+  printf("The time is %d:%d:%d\n", tm.tm_hour, tm.tm_min, tm.tm_sec);
+
+  // Print strings
   printf("10! is %d.\n", factorial);
   printf("The result of %i + %i is %i\n", a, b, result);
   printf("The 7th number in the array is %i\n", numbers[6]);
