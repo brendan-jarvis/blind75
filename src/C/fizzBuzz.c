@@ -6,7 +6,7 @@ char *fizzBuzz(int number);
 int main()
 {
   int i;
-  for (i = 1; i < 50; i++)
+  for (i = 1; i < 51; i++)
   {
     printf("%s\n", fizzBuzz(i));
   }
