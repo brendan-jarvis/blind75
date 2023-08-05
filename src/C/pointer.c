@@ -30,6 +30,7 @@ int main()
   int intArr[] = {1, 2, 3};
   int *intArrPtr = intArr;
   printf("intArrPtr value: %d\n", *intArrPtr);
+  printf("intArr values: %d, %d, %d\n", intArrPtr[0], intArrPtr[1], intArrPtr[2]);
 
   intArrPtr++;
   printf("intArrPtr incremented value: %d\t%p\n", *intArrPtr, intArrPtr);
