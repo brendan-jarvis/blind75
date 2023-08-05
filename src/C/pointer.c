@@ -11,13 +11,18 @@ int main()
 
   dblPtr = &dblVarReassign;
 
-  printf("%f\n%f", dblVar, *dblPtr);
+  printf("%f\n%f\n", dblVar, *dblPtr);
 
   // pointer arithmetic
-  int intArray[] = {1, 2, 3, 4, 5};
-  int *intPtr = intArray;
-  printf("%d\n", *intPtr);
+  int x = 1;
+  int y = 2;
+  int z = 3;
+  int *intPtr = &x;
+  printf("intPtr value: %d\n", *intPtr);
 
   intPtr++;
-  printf("%d\n", *intPtr);
+  printf("intPtr incremented value: %d\t%p\n", *intPtr, intPtr);
+
+  intPtr -= 2;
+  printf("intPtr decremented value: %d\t%p\n", *intPtr, intPtr);
 }
