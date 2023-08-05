@@ -1,13 +1,16 @@
 #include <stdio.h>
 
-double dblVar;
+double dblVar = 3.14;
 double *dblPtr = &dblVar;
-double **dblPtrPtr = &dblPtr;
-double ***dblPtrPtrPtr = &dblPtrPtr;
+
+double dblVarReassign = 2.71;
 
 int main()
 {
   printf("%p\n", dblPtr);
-  printf("%p\n", dblPtrPtr);
-  printf("%p\n", dblPtrPtrPtr);
+
+  dblPtr = &dblVarReassign;
+  printf("%p\n", dblPtr);
+  // print dblVar and dblVarReassign
+  printf("%f\n%f", dblVar, dblVarReassign);
 }
