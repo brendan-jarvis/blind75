@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int x;
-int *ptr = &x;
+double dblVar;
+double *dblPtr = &dblVar;
 
 int main()
 {
-  printf("%p", ptr);
+  printf("%p", dblPtr);
 }
