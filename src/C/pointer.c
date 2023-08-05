@@ -12,5 +12,5 @@ int main()
   dblPtr = &dblVarReassign;
   printf("%p\n", dblPtr);
   // print dblVar and dblVarReassign
-  printf("%f\n%f", dblVar, dblVarReassign);
+  printf("%f\n%f", dblVar, *dblPtr);
 }
