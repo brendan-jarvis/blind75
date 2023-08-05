@@ -10,7 +10,6 @@ int main()
   printf("%p\n", dblPtr);
 
   dblPtr = &dblVarReassign;
-  printf("%p\n", dblPtr);
-  // print dblVar and dblVarReassign
+
   printf("%f\n%f", dblVar, *dblPtr);
 }
