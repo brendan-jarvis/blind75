@@ -12,4 +12,12 @@ int main()
   dblPtr = &dblVarReassign;
 
   printf("%f\n%f", dblVar, *dblPtr);
+
+  // pointer arithmetic
+  int intArray[] = {1, 2, 3, 4, 5};
+  int *intPtr = intArray;
+  printf("%d\n", *intPtr);
+
+  intPtr++;
+  printf("%d\n", *intPtr);
 }
