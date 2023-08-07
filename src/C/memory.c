@@ -5,6 +5,7 @@
 typedef struct
 {
   char *name;
+  char *author;
   char *line1;
   char *line2;
   char *line3;
@@ -20,17 +21,20 @@ int main()
   Haiku *basho = (Haiku *)malloc(sizeof(Haiku));
 
   // create a haiku basho
-  basho->name = (char *)malloc(strlen("Basho") + 1);
-  strcpy(basho->name, "Basho");
+  basho->name = (char *)malloc(strlen("The Old Pond") + 1);
+  strcpy(basho->name, "The Old Pond");
 
-  basho->line1 = (char *)malloc(strlen("an old silent pond") + 1);
-  strcpy(basho->line1, "an old silent pond");
+  basho->author = (char *)malloc(strlen("Matsuo Basho") + 1);
+  strcpy(basho->author, "Matsuo Basho");
 
-  basho->line2 = (char *)malloc(strlen("a frog jumps into the pond") + 1);
-  strcpy(basho->line2, "a frog jumps into the pond");
+  basho->line1 = (char *)malloc(strlen("An old silent pond 古池や") + 1);
+  strcpy(basho->line1, "An old silent pond 古池や");
 
-  basho->line3 = (char *)malloc(strlen("splash! silence again") + 1);
-  strcpy(basho->line3, "splash! silence again");
+  basho->line2 = (char *)malloc(strlen("A frog jumps into the pond 蛙飛び込む") + 1);
+  strcpy(basho->line2, "A frog jumps into the pond 蛙飛び込む");
+
+  basho->line3 = (char *)malloc(strlen("Splash! Silence again. 水の音") + 1);
+  strcpy(basho->line3, "Splash! Silence again. 水の音");
 
   // print the haiku
   printf("\n%s\n%s\n%s\n%s\n", basho->name, basho->line1, basho->line2, basho->line3);
