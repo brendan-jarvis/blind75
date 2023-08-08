@@ -20,14 +20,13 @@ int main()
   printf("letter: %c\n", letter);
   printf("digit: %c\n", digit);
   printf("bigNumber: %ld\n", bigNumber);
-  // a circle with radius number has an area of PI * number * number
   printf("area of circle with radius %d: %f\n", number, PI * number * number);
 
-  // implicit conversion
+  // implicit casting
   number = decimal;
   printf("number: %d\n", number);
 
-  // explicit conversion
+  // explicit casting
   number = (int)decimal;
   printf("number: %d\n", number);
 }
