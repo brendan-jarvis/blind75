@@ -56,4 +56,15 @@ int main()
   {
     printf("oddPlusEven is odd\n");
   }
+
+  int m = 0;
+  int n = 10;
+
+  while (m < n)
+  {
+    printf("%d %d\n", m, n);
+    m++;
+    n--;
+  }
+  printf("%d %d\n", m, n);
 }
