@@ -29,4 +29,14 @@ int main()
   // explicit casting
   number = (int)decimal;
   printf("number: %d\n", number);
+
+  for (int i = 65; i < 91; i++)
+  {
+    char c = i;
+    char lowercase = c + 32;
+
+    int lowercaseInt = (int)lowercase;
+
+    printf("%c%c (%i, %i)\t", c, lowercase, i, lowercaseInt);
+  }
 }
