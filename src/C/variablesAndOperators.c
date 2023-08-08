@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -67,4 +68,17 @@ int main()
     n--;
   }
   printf("%d %d\n", m, n);
+
+  int a = 1;
+  int b = 2;
+
+  while (a != b)
+  {
+    // print the numbers
+    printf("\nRandomising two numbers...\n");
+
+    // assign a random int 1-10 to both
+    a = rand() % 10 + 1;
+    b = rand() % 10 + 1;
+  }
 }
