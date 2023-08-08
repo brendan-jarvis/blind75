@@ -46,4 +46,14 @@ int main()
   int oddPlusEven = odd + even;
 
   printf("\n\nodd: %d\neven: %d\nodd + even: %d\n", odd, even, oddPlusEven);
+  printf("oddPlusEven %% 2: %d\n", oddPlusEven % 2);
+
+  if (oddPlusEven % 2 == 0)
+  {
+    printf("oddPlusEven is even\n");
+  }
+  else
+  {
+    printf("oddPlusEven is odd\n");
+  }
 }
