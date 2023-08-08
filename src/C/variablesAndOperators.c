@@ -7,6 +7,7 @@ int main()
   char letter;
   char digit;
   long int bigNumber;
+  const double PI = 3.14159265358979323846;
 
   number = 10;
   decimal = 3.14;
@@ -19,4 +20,6 @@ int main()
   printf("letter: %c\n", letter);
   printf("digit: %c\n", digit);
   printf("bigNumber: %ld\n", bigNumber);
+  // a circle with radius number has an area of PI * number * number
+  printf("area of circle with radius %d: %f\n", number, PI * number * number);
 }
