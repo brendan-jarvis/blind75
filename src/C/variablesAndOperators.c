@@ -22,4 +22,12 @@ int main()
   printf("bigNumber: %ld\n", bigNumber);
   // a circle with radius number has an area of PI * number * number
   printf("area of circle with radius %d: %f\n", number, PI * number * number);
+
+  // implicit conversion
+  number = decimal;
+  printf("number: %d\n", number);
+
+  // explicit conversion
+  number = (int)decimal;
+  printf("number: %d\n", number);
 }
