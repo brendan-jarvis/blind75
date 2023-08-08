@@ -39,4 +39,11 @@ int main()
 
     printf("%c%c (%i, %i)\t", c, lowercase, i, lowercaseInt);
   }
+
+  // operations
+  int odd = 3;
+  int even = 4;
+  int oddPlusEven = odd + even;
+
+  printf("\n\nodd: %d\neven: %d\nodd + even: %d\n", odd, even, oddPlusEven);
 }
