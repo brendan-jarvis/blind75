@@ -4,14 +4,15 @@
 int main()
 {
 
-  char s1[20] = "Brendan";
+  char s1[] = "Brendan";
   char s2[] = " Jarvis";
 
-  strcat(s1, s2);
+  int len = strlen(s1) + strlen(s2);
 
-  printf("%s\n", s1);
+  char s3[len];
 
-  strcpy(s1, "Jarvis, Brendan");
+  strcpy(s3, s1);
+  strcat(s3, s2);
 
-  printf("%s\n", s1);
+  printf("%s\n", s3);
 }
