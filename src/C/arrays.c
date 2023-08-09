@@ -6,8 +6,11 @@ int main()
   int coordinates[5] = {1, 2, 3, 4, 5};
   int coordinatesLength = sizeof(coordinates) / sizeof(coordinates[0]);
 
-  int multiDimensionalCoordinates[2][3] = {{1, 2, 3}, {4, 5, 6}};
-  int multiDimensionalCoordinatesLength = sizeof(multiDimensionalCoordinates) / sizeof(multiDimensionalCoordinates[0]);
+  int matrix[3][4] = {
+      {1, 2, 3, 4},
+      {5, 6, 7, 8},
+      {9, 10, 11, 12}};
+  int matrixLength = sizeof(matrix) / sizeof(matrix[0]);
 
   system("clear");
   printf("Array:\n");
@@ -17,11 +20,11 @@ int main()
   }
 
   printf("\nMultidimensional array:\n");
-  for (int i = 0; i < multiDimensionalCoordinatesLength; i++)
+  for (int i = 0; i < matrixLength; i++)
   {
-    for (int j = 0; j < 3; j++)
+    for (int j = 0; j < 4; j++)
     {
-      printf("%d\t", multiDimensionalCoordinates[i][j]);
+      printf("%d\t", matrix[i][j]);
     }
     printf("\n");
   }
