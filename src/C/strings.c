@@ -10,4 +10,8 @@ int main()
   strcat(s1, s2);
 
   printf("%s\n", s1);
+
+  strcpy(s1, "Jarvis, Brendan");
+
+  printf("%s\n", s1);
 }
