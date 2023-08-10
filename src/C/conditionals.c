@@ -15,22 +15,29 @@ int main()
 
   for (int i = 0; i < 10; i++)
   {
-    if (randomIntegers[i] % 3 == 0)
-    {
-      printf("Fizz\t");
-    }
-    if (randomIntegers[i] % 5 == 0)
-    {
-      printf("Buzz\t");
-    }
     if (randomIntegers[i] % 3 == 0 && randomIntegers[i] % 5 == 0)
     {
       printf("FizzBuzz\t");
+    }
+    else if (randomIntegers[i] % 3 == 0)
+    {
+      printf("Fizz\t");
+    }
+    else if (randomIntegers[i] % 5 == 0)
+    {
+      printf("Buzz\t");
     }
     else
     {
       printf("%i\t", randomIntegers[i]);
     }
+  }
+
+  printf("\n");
+
+  for (int i = 0; i < 10; i++)
+  {
+    printf("%s\t", randomIntegers[i] % 2 == 0 ? "Even" : "Odd");
   }
 
   printf("\n");
