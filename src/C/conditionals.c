@@ -14,6 +14,13 @@ int main()
 
   for (int i = 0; i < 10; i++)
   {
-    printf("%d\n", randomIntegers[i]);
+    if (randomIntegers[i] % 2 == 0)
+    {
+      printf("Even\n");
+    }
+    else
+    {
+      printf("Odd\n");
+    }
   }
 }
