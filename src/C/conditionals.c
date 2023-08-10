@@ -14,13 +14,21 @@ int main()
 
   for (int i = 0; i < 10; i++)
   {
-    if (randomIntegers[i] % 2 == 0)
+    if (randomIntegers[i] % 3 == 0)
     {
-      printf("Even\n");
+      printf("Fizz\t");
+    }
+    if (randomIntegers[i] % 5 == 0)
+    {
+      printf("Buzz\t");
+    }
+    if (randomIntegers[i] % 3 == 0 && randomIntegers[i] % 5 == 0)
+    {
+      printf("FizzBuzz\t");
     }
     else
     {
-      printf("Odd\n");
+      printf("%i\t", randomIntegers[i]);
     }
   }
 }
