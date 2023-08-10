@@ -77,6 +77,7 @@ int main()
     printf("%i - Same pH as NaOH\n", pH);
     break;
   default:
+    printf("Invalid pH value\n");
     break;
   }
 }
