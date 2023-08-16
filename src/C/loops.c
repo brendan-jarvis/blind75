@@ -1,28 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <math.h>
 
 int main()
 {
   srand(time(NULL));
   int random = rand() % 20 + 1;
   int guess;
-  int hints = 0;
+  char hints;
   int tries = 0;
 
-  printf("Guess the number between 1 and 20!\n");
+  printf("Guess the number between 1 and 20!\nEnter 0 to quit.\n");
 
-  printf("Do you want some hints? (1 for yes, 0 for no)\n");
+  printf("Do you want some hints? (y/n)\n");
 
-  scanf("%d", &hints);
+  scanf("%c", &hints);
 
-  if (hints == 1)
+  if (hints == 'y' || hints == 'Y')
   {
-    printf("The number squared is:\t%d\n", (int)pow(random, 2));
-    printf("The number cubed is:\t%d\n", (int)pow(random, 3));
+    printf("The number squared is:\t%d\n", random * random);
+    printf("The number cubed is:\t%d\n", random * random * random);
   }
-  else if (hints == 0)
+  else if (hints == 'n' || hints == 'N')
   {
     printf("Okay, no hints for you!\nEnter your guess:\n");
   }
@@ -31,6 +30,11 @@ int main()
 
   while (guess != random)
   {
+    if (guess <= 0)
+    {
+      printf("You have quit the game! The number was %d!\n", random);
+      break;
+    }
     if (tries == 4)
     {
       printf("You have run out of tries! The number was %d!\n", random);
