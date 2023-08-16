@@ -4,22 +4,23 @@
 #include <ctype.h>
 #include <time.h>
 
-float getRandomFloat(void)
+void getRandomFloat(void)
 {
   srand(time(NULL));
-  float randomDecimal = rand() % 100;
-  float random = randomDecimal / 100;
+  float *random = (float *)malloc(sizeof(float));
+  *random = rand() % 20 + 1;
 
-  return random;
+  printf("Number: %i\n", (int)*random);
+  printf("Number squared: %i\n", (int)pow(*random, 2));
+  printf("Number cubed: %i\n", (int)pow(*random, 3));
+  printf("Number log base 10: %f\n", log10(*random));
+
+  free(random);
 }
 
 int main(void)
 {
-  float random = getRandomFloat();
-
-  printf("Number: %f\n", random);
-  printf("Number ceiling: %d\n", (int)ceil(random));
-  printf("Number floor: %d\n", (int)floor(random));
+  getRandomFloat();
 
   return 0;
 }
