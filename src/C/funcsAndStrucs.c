@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <time.h>
 
-void getRandomFloat(void)
+void printRandomFloat(void)
 {
   srand(time(NULL));
   float *random = (float *)malloc(sizeof(float));
@@ -20,7 +20,7 @@ void getRandomFloat(void)
 
 int main(void)
 {
-  getRandomFloat();
+  printRandomFloat();
 
   return 0;
 }
