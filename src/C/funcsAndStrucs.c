@@ -4,11 +4,11 @@
 #include <ctype.h>
 #include <time.h>
 
-void printRandomFloat(void)
+void printRandomNumber(int maxNumber)
 {
   srand(time(NULL));
   float *random = (float *)malloc(sizeof(float));
-  *random = rand() % 20 + 1;
+  *random = rand() % maxNumber + 1;
 
   printf("Number: %i\n", (int)*random);
   printf("Number squared: %i\n", (int)pow(*random, 2));
@@ -20,7 +20,11 @@ void printRandomFloat(void)
 
 int main(void)
 {
-  printRandomFloat();
+  printRandomNumber(20);
+  printf("\n");
+  printRandomNumber(400);
+  printf("\n");
+  printRandomNumber(1000);
 
   return 0;
 }
