@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <time.h>
 
-void printRandomNumber(int maxNumber);
+void printRandomNumber(int);
 
 int increment(int *number)
 {
