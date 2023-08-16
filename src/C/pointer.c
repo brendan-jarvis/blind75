@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 double dblVar = 3.14;
 double *dblPtr = &dblVar;
@@ -34,4 +35,16 @@ int main()
 
   intArrPtr++;
   printf("intArrPtr incremented value: %d\t%p\n", *intArrPtr, intArrPtr);
+
+  // Pointers and arrays
+  char str[] = "thequickbrownfoxjumpsoverthelazydog";
+  char *strPtr = &str[0];
+
+  for (int i = 0; i < strlen(str); i++)
+  {
+    *strPtr = *strPtr - 32;
+    strPtr++;
+  }
+
+  printf("\n%s\n", str);
 }
