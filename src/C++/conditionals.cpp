@@ -8,7 +8,7 @@ int main() {
     int zeroCount = 0;
     int oneCount = 0;
     
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 10000; i++) {
         random = rand() % 2;
         if (random == 0) {
             zeroCount++;
