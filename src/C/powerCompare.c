@@ -19,12 +19,20 @@ int main()
   const int total = 5627;
   const float bottlesPerYear = 6.5;
 
-  struct PowerCompany flickElectric = {"Flick", 1.0350, 0.2199, 134.55, 0.483};
+  float frankEnergyLPGOnlyBottleRefill = 140.001;
+  float frankEnergyLPGOnlyBottleRentalFee = 25.001;
+
+  float genesisEnergyLPGOnlyBottleRefill = 150.48;
+  float genesisEnergyLPGOnlyBottleRentalFee = 11.50;
+
+  struct PowerCompany flickElectric = {"Flick/Frank LPG", 1.0350, 0.2199, frankEnergyLPGOnlyBottleRefill, frankEnergyLPGOnlyBottleRentalFee};
+  struct PowerCompany flickElectric2 = {"Flick/Genesis LPG", 1.0350, 0.2199, genesisEnergyLPGOnlyBottleRefill, genesisEnergyLPGOnlyBottleRentalFee};
   struct PowerCompany frankEnergy = {"Frank - Low user", 0.69, 0.2461, 140.00, 0.00};
   struct PowerCompany frankEnergy2 = {"Frank - Standard user", 1.3225, 0.2174, 140.00, 0.00};
-  struct PowerCompany pulseEnergy = {"Pulse Energy", 1.035, 0.235, 134.55, 0.483};
+  struct PowerCompany pulseEnergy = {"Pulse Energy", 1.035, 0.235, 134.55, 29.3825};
 
   float flickElectricCost = printAnnualCostEstimate(&flickElectric, total, bottlesPerYear);
+  float flickElectric2Cost = printAnnualCostEstimate(&flickElectric2, total, bottlesPerYear);
   float frankEnergyCost = printAnnualCostEstimate(&frankEnergy, total, bottlesPerYear);
   float frankEnergy2Cost = printAnnualCostEstimate(&frankEnergy2, total, bottlesPerYear);
   float pulseEnergyCost = printAnnualCostEstimate(&pulseEnergy, total, bottlesPerYear);
