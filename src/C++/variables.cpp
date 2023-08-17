@@ -4,8 +4,9 @@ int main(){
   int score = 0;
 
   for (int i = 0; i < 10; i++){
-    score += 10;
-    
+    // Increment score by i - Fibonacci sequence
+    score += i;
+
     std::cout << "Score: " << score << "\n";
   }
 
