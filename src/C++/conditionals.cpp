@@ -7,6 +7,7 @@ int main() {
     int random;
     int zeroCount = 0;
     int oneCount = 0;
+    int playAgain = 0;
     
     for (int i = 0; i < 10000; i++) {
         random = rand() % 2;
@@ -24,4 +25,18 @@ int main() {
     std::cout << "Heads:\t\t" << zeroCount << "\n";
     std::cout << "Tails:\t\t" << oneCount << "\n";
 
+    std::cout << "\n" << "Play again? (1 = yes, 0 = no): ";
+    std::cin >> playAgain;
+
+    switch (playAgain) {
+        case 1:
+            main();
+            break;
+        case 0:
+            std::cout << "Goodbye!\n";
+            break;
+        default:
+            std::cout << "Invalid input. Goodbye!\n";
+            break;
+    }
 }
