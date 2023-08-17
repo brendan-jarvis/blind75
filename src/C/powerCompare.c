@@ -29,13 +29,15 @@ int main()
   struct PowerCompany flickElectric2 = {"Flick/Genesis LPG", 1.0350, 0.2199, genesisEnergyLPGOnlyBottleRefill, genesisEnergyLPGOnlyBottleRentalFee};
   struct PowerCompany frankEnergy = {"Frank - Low user", 0.69, 0.2461, 140.00, 0.00};
   struct PowerCompany frankEnergy2 = {"Frank - Standard user", 1.3225, 0.2174, 140.00, 0.00};
-  struct PowerCompany pulseEnergy = {"Pulse Energy", 1.035, 0.235, 134.55, 29.3825};
+  struct PowerCompany pulseEnergy = {"Pulse Energy", 1.035, 0.235, 134.55, 14.69125};
+  struct PowerCompany pulseEnergy2 = {"Pulse Energy - New Rates", 1.050, 0.240, 150.00, 20.00}; // Placeholder rates, TBA
 
-  float flickElectricCost = printAnnualCostEstimate(&flickElectric, total, bottlesPerYear);
-  float flickElectric2Cost = printAnnualCostEstimate(&flickElectric2, total, bottlesPerYear);
   float frankEnergyCost = printAnnualCostEstimate(&frankEnergy, total, bottlesPerYear);
   float frankEnergy2Cost = printAnnualCostEstimate(&frankEnergy2, total, bottlesPerYear);
+  float flickElectric2Cost = printAnnualCostEstimate(&flickElectric2, total, bottlesPerYear);
   float pulseEnergyCost = printAnnualCostEstimate(&pulseEnergy, total, bottlesPerYear);
+  float flickElectricCost = printAnnualCostEstimate(&flickElectric, total, bottlesPerYear);
+  // float pulseEnergy2Cost = printAnnualCostEstimate(&pulseEnergy2, total, bottlesPerYear);
 }
 
 float annualDailyCharge(float charge)
