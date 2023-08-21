@@ -8,6 +8,10 @@ int main()
   std::vector<double> cities_longitudes = {-74.0060, -122.4194, -87.6298, -96.7970, -75.1652};
   std::vector<std::string> cities_names = {"New York", "San Francisco", "Chicago", "Dallas", "Philadelphia"};
 
+  cities_latitudes.push_back(29.7604);
+  cities_longitudes.push_back(-95.3698);
+  cities_names.push_back("Houston");
+
   std::cout << "Cities latitudes:\n";
   for (int i = 0; i < cities_latitudes.size(); i++)
   {
