@@ -10,6 +10,16 @@ double average(double a, double b)
   return (a + b) / 2;
 }
 
+int tenth_power(int num)
+{
+  int result = 1;
+  for (int i = 0; i < 10; i++)
+  {
+    result = result * num;
+  }
+  return result;
+};
+
 int main()
 {
   for (int i = 1; i < 20; i++)
