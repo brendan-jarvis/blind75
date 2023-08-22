@@ -24,5 +24,7 @@ int main()
 
     std::cout << std::size(arr) << '\n';
 
+    std::cout << "It works!\n";  
+
     return 0;
 }
