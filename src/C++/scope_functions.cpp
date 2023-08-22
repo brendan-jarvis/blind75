@@ -30,3 +30,18 @@ std::string order66(std::string passcode)
   }
   return "";
 }
+
+std::string overload(int number)
+{
+  number *= number;
+  return std::to_string(number);
+}
+
+std::string overload(std::string text)
+{
+  int number = std::stoi(text);
+  number *= number;
+  text = std::to_string(number);
+
+  return text;
+}

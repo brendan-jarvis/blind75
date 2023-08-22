@@ -11,4 +11,12 @@ int main()
             << order66();
   std::cout << "Execute Order 66\n"
             << order66("Kill the Jedi!");
+
+  // Overloading functions
+  std::cout << "Overload 5 (int)\n"
+            << overload(5)
+            << "!\n";
+  std::cout << "Overload 5 (string)\n"
+            << overload("5")
+            << "!\n";
 }
