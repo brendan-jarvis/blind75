@@ -3,6 +3,6 @@
 
 int main()
 {
-  std::cout << secret_string("Flash");
-  std::cout << secret_string("Green Arrow");
+  std::cout << "Flash\n" << secret_string("Flash");
+  std::cout << "Green Arrow\n" << secret_string("Green Arrow");
 }
