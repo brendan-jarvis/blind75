@@ -3,6 +3,12 @@
 
 int main()
 {
-  std::cout << "Flash\n" << secret_string("Flash");
-  std::cout << "Green Arrow\n" << secret_string("Green Arrow");
+  std::cout << "Flash\n"
+            << secret_string("Flash");
+  std::cout << "Green Arrow\n"
+            << secret_string("Green Arrow");
+  std::cout << "Execute Order 66\n"
+            << order66();
+  std::cout << "Execute Order 66\n"
+            << order66("Kill the Jedi!");
 }
