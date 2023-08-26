@@ -18,6 +18,11 @@ public:
     year = new_year;
   };
 
+  // Destructor
+  ~Song(){
+    std::cout << "\nGoodbye, " << title << "!\n";
+  };
+
   // Getters
   std::string getTitle(){
     return title;
