@@ -1,7 +1,6 @@
 #include <iostream>
-#include <string>
-#include <vector>
+#include "pointers_functions.h"
 
 int main(){
-  std::cout << "REFERENCES AND POINTERS\n";
+  std::cout << welcomeMessage();
 }
