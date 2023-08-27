@@ -25,16 +25,16 @@ public:
 
   // Getters
   std::string getTitle(){
-    return title;
+    return this->title;
   };
   std::string getArtist(){
-    return artist;
+    return this->artist;
   };
   std::string getAlbum(){
-    return album;
+    return this->album;
   };
   std::string getGenre(){
-    return genre;
+    return this->genre;
   };
   
   int getYear(){
