@@ -20,7 +20,8 @@ public:
 
   // Destructor
   ~Song(){
-    std::cout << "\nGoodbye, " << title << "!\n";
+    // Don't need to do anything here
+    // std::cout << "\nGoodbye, " << title << "!\n";
   };
 
   // Getters
