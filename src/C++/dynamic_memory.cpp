@@ -1,18 +1,23 @@
 #include <iostream>
+#include <random>
 
 int main()
 {
-  std::cout << "Started the application! Allocating 1 int dynamically\n";
+  int *randomInt{new int};
+  std::cout << "Started the application!\n";
 
-  int *ptr{new int};
-  std::cout << "Allocated 1 int dynamically\n";
+  // assign a random number to memory location
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<> dis(0, 9999);
+  *randomInt = dis(gen);
 
-  std::cout << "Enter a number: ";
-  std::cin >> *ptr;
-  std::cout << "You entered: " << *ptr << '\n';
+  // print the value
+  std::cout << "The value of the int is: " << *randomInt << '\n';
 
-  std::cout << "Deallocating the int\n";
-  delete ptr;
-  ptr = nullptr;
+  delete randomInt;
+  randomInt = nullptr;
+
+  // Exit the application
   return 0;
 }
