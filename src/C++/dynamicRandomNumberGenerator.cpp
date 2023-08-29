@@ -9,6 +9,15 @@ int getRandomInt(int min = 1000, int max = 9999)
   return dis(gen);
 }
 
+bool repeatingDigits(int number)
+{
+  if (number % 10 == (number / 10) % 10 || number % 10 == (number / 100) % 10 || number % 10 == (number / 1000) % 10 || (number / 10) % 10 == (number / 100) % 10 || (number / 10) % 10 == (number / 1000) % 10 || (number / 100) % 10 == (number / 1000) % 10)
+  {
+    return true;
+  }
+  return false;
+}
+
 int main()
 {
   int size;
@@ -16,15 +25,14 @@ int main()
   std::cin >> size;
   int *arrayOfInts{new int[size]};
 
-  for (int i = 0; i < size; i++)
-  {
-    arrayOfInts[i] = getRandomInt();
-  }
-
-  // print the values in the array in a table
   std::cout << "Index\tValue\n";
   for (int i = 0; i < size; i++)
   {
+    arrayOfInts[i] = getRandomInt();
+    while (repeatingDigits(arrayOfInts[i]))
+    {
+      arrayOfInts[i] = getRandomInt();
+    }
     std::cout << i + 1 << "\t" << arrayOfInts[i] << "\n";
   }
 
