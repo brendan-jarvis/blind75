@@ -14,4 +14,7 @@ int main(){
 
   std::cout << "Function tripleConst(*b) returns " << tripleConst(*b) << "\n";
   std::cout << "a = " << a << "\tb = " << *b << "\n";
+
+  std::cout << "Memory addresses:\n";
+  std::cout << "a = " << &a << "\tb = " << &b << "\n";
 }
