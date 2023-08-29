@@ -12,3 +12,9 @@ int triple (int &i)
   i = i * 3;
   return i;
 }
+
+int tripleConst (const int &i)
+{
+  // i = i * 3; // This line will cause an error
+  return i * 3;
+}

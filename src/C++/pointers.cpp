@@ -7,8 +7,11 @@ int main(){
 
   std::cout << welcomeMessage();
   std::cout << "Variable a = " << a << " and variable b = " << *b << "\n";
-  
+
   std::cout << "Tripling variable a...\n";
   triple(a);
   std::cout << "Variable a = " << a << " and variable b = " << *b << "\n";
+
+  std::cout << "Function tripleConst(*b) returns " << tripleConst(*b) << "\n";
+  std::cout << "a = " << a << "\tb = " << *b << "\n";
 }
