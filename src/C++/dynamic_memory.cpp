@@ -2,11 +2,17 @@
 
 int main()
 {
-  std::cout << "Started the application! Allocating 4MB of memory\n";
-  // allocate an amount of memory that will cause stack overflow
-  int array[1000000][1000];
-  std::cout << "Allocated the memory! Press enter to continue\n";
-  std::cin.get();
-  std::cout << "Finished the application!\n";
+  std::cout << "Started the application! Allocating 1 int dynamically\n";
+
+  int *ptr{new int};
+  std::cout << "Allocated 1 int dynamically\n";
+
+  std::cout << "Enter a number: ";
+  std::cin >> *ptr;
+  std::cout << "You entered: " << *ptr << '\n';
+
+  std::cout << "Deallocating the int\n";
+  delete ptr;
+  ptr = nullptr;
   return 0;
 }
