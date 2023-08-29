@@ -36,8 +36,7 @@ int main()
     std::cout << i + 1 << "\t" << arrayOfInts[i] << "\n";
   }
 
-  delete arrayOfInts;
-  arrayOfInts = nullptr;
+  delete[] arrayOfInts;
 
   return 0;
 }
