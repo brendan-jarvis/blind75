@@ -110,7 +110,7 @@ int main()
     }
     else if (i == 8)
     {
-      cout << "\n\033[30mIt's a tie!\033[0m\n";
+      cout << "\n\033[33mIt's a tie!\033[0m\n";
     }
   }
 }
